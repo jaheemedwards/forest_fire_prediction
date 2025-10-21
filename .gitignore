@@ -110,6 +110,7 @@ fire_pred_env/
 # ==========================
 # Data and cache
 # ==========================
+
 *.csv
 *.tsv
 *.dat
@@ -119,10 +120,10 @@ fire_pred_env/
 *.h5
 *.pkl
 *.joblib
-*.gz
+# *.gz
 *.zip
 *.tar
-*.tar.gz
+# *.tar.gz
 
 # ==========================
 # Logs / checkpoints
