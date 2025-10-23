@@ -64,6 +64,19 @@ def predict_fire_with_usa_check(model, features: List[float]) -> Tuple[int, List
         features[0], features[1] = lat, lon
     return make_forest_fire_prediction(model, features)
 
+import pandas as pd
+import numpy as np
+
+def generate_max_humidity_label(max_humidity):
+    # Define bin edges and labels
+    bin_edges = [45.299, 64.4, 77.3, 87.9, 99.9, 100.0]  # humidity ranges
+    labels = ['Very Low', 'Low', 'Moderate', 'High', 'Very High']
+
+    # Use pd.cut to assign a label
+    label = pd.cut([max_humidity], bins=bin_edges, labels=labels, include_lowest=True)[0]
+    return label
+
+
 # -----------------------------
 # Main Script
 # -----------------------------
