@@ -135,6 +135,34 @@ print(prediction)
 
 ---
 
+### ✅ Why the “Year and Month” Pipeline Is the Best Choice
+
+While multiple feature combinations were tested, the **year_and_month** model demonstrates the most consistent and well-balanced performance across all metrics:
+
+* 📊 **Balanced Accuracy and Recall:**
+  It achieved a strong accuracy score of **0.793** and a high recall of **0.938**, meaning it detects most wildfire occurrences while still maintaining overall prediction reliability.
+
+* 🎯 **Reduced Risk of Missing Fires:**
+  Although the **year_only** model has the highest recall (0.951), the year_and_month model offers only a small trade-off (-0.013) but provides better-balanced accuracy and precision.
+
+* ⚖️ **Precision Remains High (0.827):**
+  This indicates the model maintains a low false-positive rate, avoiding excessive false alarms while still being sensitive to true wildfire events.
+
+* 🧠 **Temporal Awareness:**
+  Using both year and month helps the model capture **seasonal wildfire trends** (e.g., dry seasons) as well as **long-term climate changes across years**, leading to better generalization and understanding of temporal patterns.
+
+---
+
+### ✅ Final Decision
+
+The **XGBoost model with Year + Month features** was selected as the best-performing model due to its:
+
+✔ Strong balance of accuracy, precision, and recall
+✔ Ability to capture both long-term and seasonal wildfire trends
+✔ Low model complexity while maintaining high predictive value
+
+---
+
 ## 📊 EDA & Visualizations
 
 * Wildfire location maps by humidity level

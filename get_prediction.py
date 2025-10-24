@@ -7,7 +7,7 @@ import pandas as pd
 # -----------------------------
 # Constants
 # -----------------------------
-COLUMN_NAMES = ['lat', 'lon', 'max_humidity', 'max_temp', 'vapor_pressure',
+COLUMN_NAMES = ['lat', 'lon', 'max_humidity', 'max_temp', 'wind_speed',
                 'fuel_moisture_100h', 'year', 'month', 'day']
 
 # -----------------------------
@@ -64,9 +64,6 @@ def predict_fire_with_usa_check(model, features: List[float]) -> Tuple[int, List
         features[0], features[1] = lat, lon
     return make_forest_fire_prediction(model, features)
 
-import pandas as pd
-import numpy as np
-
 def generate_max_humidity_label(max_humidity):
     # Define bin edges and labels
     bin_edges = [45.299, 64.4, 77.3, 87.9, 99.9, 100.0]  # humidity ranges
@@ -82,7 +79,7 @@ def generate_max_humidity_label(max_humidity):
 # -----------------------------
 
 # Load model
-model_path = "models/wildfire_rf_balanced_classes_best_model.pkl.gz"
+model_path = "models/year_and_month.pkl.gz"
 model = load_gzipped_model(model_path)
 
 # Print pipeline steps
