@@ -9,6 +9,7 @@ from inference import (
 from shapely.geometry import Point
 from shapely.ops import nearest_points
 import geopandas as gpd
+from custom_transformers import TimeFeaturesAdder
 
 # -----------------------------
 # 0. Load USA Land Polygon for snapping

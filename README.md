@@ -12,6 +12,14 @@ We leverage the **FireCastRL dataset**, which combines GRIDMET daily weather var
 
 ---
 
+## Website Preview
+
+![Wildfire Predictor Website](images/forest_fire_website.png)
+
+Check out the live app here: [forestfirepredictionjaheemedwards.streamlit.app](https://forestfirepredictionjaheemedwards.streamlit.app)
+
+---
+
 ## 🔹 Dataset
 
 **Source:** [FireCastRL: GRIDMET + IRWIN spatiotemporal wildfire dataset (2014–2025)](https://www.kaggle.com/datasets/firecastrl/us-wildfire-dataset)
@@ -38,27 +46,52 @@ We leverage the **FireCastRL dataset**, which combines GRIDMET daily weather var
 ```
 forest_fire_prediction
 ├── README.md
-├── data/
-│   └── wildfire_data.parquet
-├── get_prediction.py      # Helper functions and get_prediction() for inference
-├── images/
-│   ├── Wildfire Locations Colored by Humidity Level.png
-│   ├── wildfire_locations.png
-│   └── XGBoostModelPerformanceAcrossPipelineVariants.png
-├── main.py                # Streamlit app for live predictions
-├── models/
-│   ├── month_only.pkl.gz
-│   ├── no_time_features.pkl.gz
-│   ├── wildfire_rf_balanced_classes_best_model.pkl.gz
-│   ├── year_and_month.pkl.gz
-│   └── year_only.pkl.gz
-├── notebooks/
-│   ├── forest_fire_binary_classification.ipynb
-│   ├── forest_fire_eda.ipynb
-│   ├── forest_fire_eda_part2.ipynb
-│   ├── wild_fire_classification_V2.ipynb
-│   └── wild_fire_classification_V3.ipynb
-└── requirements.txt
+├── __pycache__
+│   ├── custom_transformers.cpython-312.pyc
+│   └── inference.cpython-312.pyc
+├── custom_transformers.py
+├── data
+│   └── wildfire_data.parquet
+├── images
+│   ├── Wildfire Locations Colored by Humidity Level.png
+│   ├── XGBoostModelPerformanceAcrossPipelineVariants.png
+│   ├── forest_fire_website.png
+│   ├── forest_fire_website2.png
+│   └── wildfire_locations.png
+├── inference.py
+├── main.py
+├── map_stuff
+│   ├── ne_50m_admin_0_countries.README.html
+│   ├── ne_50m_admin_0_countries.VERSION.txt
+│   ├── ne_50m_admin_0_countries.cpg
+│   ├── ne_50m_admin_0_countries.dbf
+│   ├── ne_50m_admin_0_countries.prj
+│   ├── ne_50m_admin_0_countries.shp
+│   └── ne_50m_admin_0_countries.shx
+├── models
+│   ├── month_only.pkl.gz
+│   ├── no_time_features.pkl.gz
+│   ├── wildfire_rf_balanced_classes_best_model.pkl
+│   ├── wildfire_rf_balanced_classes_best_model.pkl.gz
+│   ├── year_and_month.pkl.gz
+│   └── year_only.pkl.gz
+├── notebooks
+│   ├── forest_fire_binary_classification.ipynb
+│   ├── forest_fire_eda.ipynb
+│   ├── forest_fire_eda_part2.ipynb
+│   ├── wild_fire_classification_V2.ipynb
+│   └── wild_fire_classification_V3.ipynb
+├── requirements.txt
+└── venv
+    ├── bin
+    ├── etc
+    ├── include
+    ├── lib
+    ├── lib64 -> lib
+    ├── pyvenv.cfg
+    └── share
+
+14 directories, 32 files
 ```
 
 ---
